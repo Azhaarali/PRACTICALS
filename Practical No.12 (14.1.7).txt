@@ -1,0 +1,49 @@
+//Azhar Ali
+#include <iostream>
+using namespace std;
+double volumeOfCylinder(double radius, double height) {
+    return 3.14159 * radius * radius * height;
+}
+double volumeOfSphere(double radius) {
+    return (4.0 / 3.0) * 3.14159 * radius * radius * radius; 
+}
+double volumeOfCube(double side) {
+    return side * side * side ;
+}
+int main() {
+    int choice;
+    double radius, height, side;
+    cout << "Select the shape to calculate volume:" << endl;
+    cout << "1. Cylinder" << endl;
+    cout << "2. Sphere" << endl;
+    cout << "3. Cube" << endl;
+    cout << "Enter choice (1/2/3): ";
+    cin >> choice;
+    switch(choice) {
+        case 1:
+            // Cylinder
+            cout << "Enter the radius of the cylinder: ";
+            cin >> radius;
+            cout << "Enter the height of the cylinder: ";
+            cin >> height;
+            cout << "Volume of Cylinder = " << volumeOfCylinder(radius, height) << endl;
+            break;
+        case 2:
+            // Sphere
+            cout << "Enter the radius of the sphere: ";
+            cin >> radius;
+            cout << "Volume of Sphere = " << volumeOfSphere(radius) << endl;
+            break;
+        case 3:
+            // Cube
+            cout << "Enter the side length of the cube: ";
+            cin >> side;
+            cout << "Volume of Cube = " << volumeOfCube(side) << endl;
+            break;
+        default:
+            cout << "Invalid choice! Please select a valid option (1/2/3)." << endl;
+            break;
+    }
+
+    return 0;
+}
